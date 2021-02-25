@@ -65,3 +65,7 @@ docker-compose down && docker-compose up
 [2° Performance Web I: otimizando o front-end](https://cursos.alura.com.br/course/otimizacao-performance-web)
 
 [3° Criar um projeto com Node + Docker](https://nodejs.org/en/docs/guides/nodejs-docker-webapp/)
+
+[4° Como Construir uma Aplicação Node.js com o Docker](https://www.digitalocean.com/community/tutorials/como-construir-uma-aplicacao-node-js-com-o-docker-pt)
+
+[5° Conteinerizando um aplicativo Node.js para desenvolvimento com o Docker Compose](https://www.digitalocean.com/community/tutorials/containerizing-a-node-js-application-for-development-with-docker-compose-pt)
