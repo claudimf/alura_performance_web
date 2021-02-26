@@ -58,7 +58,7 @@ Clone o [projeto](https://github.com/alura-cursos/performance-web) para depois c
 
 ### Permissões de arquivos:
 
-Ao se criar migrações, adicionar libs ou qualquer outro comando que crie arquivos dentro do contâiner Docker o proprietário para edição se torna o contâiner, sendo assim você precisará rodar o comando abaixo para alterar essas permissões e você poder editar:
+Ao se adicionar libs ou qualquer outro comando que crie arquivos dentro do contâiner Docker o proprietário para edição se torna o contâiner, sendo assim você precisará rodar o comando abaixo para alterar essas permissões e você poder editar:
 
 ```sh
 sudo chown -R $USER:$USER .
@@ -96,19 +96,13 @@ Para acessar o container da aplicação, execute:
 docker-compose run --rm web bash
 ```
 
-Para acessar a instância do banco de dados, execute:
-
-```sh
-docker exec-it [nome do db] bash
-```
-
 Para derrubar e subir a instância do docker novamente, execute:
 
 ```sh
 docker-compose down && docker-compose up
 ```
 
-🚀 :clap: Para visualizar o sistema basta acessar no navegador no endereço: [localhost:8000](localhost:8000)
+Para visualizar o sistema basta acessar no navegador no endereço: [localhost:3000](http://localhost:3000/)
 
 # Referências utilizadas
 
