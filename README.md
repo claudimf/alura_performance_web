@@ -66,6 +66,157 @@ Clone o [projeto](https://github.com/alura-cursos/performance-web) para depois c
         }
     }
     ```
+7. Faça o build da sua aplicação para poder seguir com as aulas:
+    ```sh
+    docker-compose build
+    ```
+
+# Aulas
+
+<details>
+    <summary>Economizando bytes</summary>
+    <ul>
+        <li>Porque otimizar o front-end?</li>
+        <li>Motivos pra otimização</li>
+        <li>Minificação</li>
+        <li>Automação com Gulp</li>
+        <li>Projeto & Ambiente</li>
+        <li>Projeto: Minificação</li>
+        <li>Projeto: gulp copy</li>
+        <li>Servidor & GZIP</li>
+        <li>Tamanho do download</li>
+        <li>Servidor HTTP local</li>
+        <li>Análise com DevTools</li>
+        <li>Projeto: habilitar GZIP</li>
+        <li>Revisão do conteúdo</li>
+        <li>Para saber mais: Brotli</li>
+        <li>Transcrição das aulas</li>
+    <ul>
+</details>
+
+<details>
+    <summary>Otimizações de Imagens</summary>
+    <ul>
+        <li>O peso das imagens</li>
+        <li>Otimizações lossless</li>
+        <li>Imagens grandes</li>
+        <li>O melhor formato</li>
+        <li>O melhor formato 2</li>
+        <li>Otimizações lossy</li>
+        <li>SVGs otimizados</li>
+        <li>Otimização lossless</li>
+        <li>Otimização lossy</li>
+        <li>Automação das otimizações</li>
+        <li>Projeto: redimensionar imagens</li>
+        <li>Projeto: otimizar imagens</li>
+        <li>Harmonia na equipe</li>
+        <li>Para saber mais: ferramentas de otimização de imagens</li>
+        <li>Para saber mais: por trás dos formatos de imagens</li>
+        <li>Transcrição das aulas</li>
+    <ul>
+</details>
+
+<details>
+    <summary>O custo dos requests</summary>
+    <ul>
+        <li>Custo dos requests</li>
+        <li>Conexões simultâneas</li>
+        <li>Análise dos requests no DevTools</li>
+        <li>Projeto: diminuindo dependências</li>
+        <li>Deploy no Google App Engine</li>
+        <li>Mão na massa: deploy no App Engine</li>
+        <li>Análise de performance</li>
+        <li>WebPageTest</li>
+        <li>PageSpeed Insights</li>
+        <li>(opcional) Analise outro site</li>
+        <li>Transcrição das aulas</li>
+    <ul>
+</details>
+
+<details>
+    <summary>Concatenações & Trade-offs</summary>
+    <ul>
+        <li>Concatenação do CSS</li>
+        <li>Mais concatenação e trade-offs</li>
+        <li>Por que?</li>
+        <li>Concatenação de CSS</li>
+        <li>Concatenação de JS</li>
+        <li>Transcrição das aulas</li>
+    <ul>
+</details>
+
+<details>
+    <summary>Sprites</summary>
+    <ul>
+        <li>Porque Sprites</li>
+        <li>Sprites PNG</li>
+        <li>Automação de Sprites</li>
+        <li>Projeto: sprites CSS</li>
+        <li>Sprites em SVG</li>
+        <li>Automação de Sprites SVG</li>
+        <li>Projeto: sprite SVG</li>
+        <li>(opcional) Polyfill para símbolos SVG</li>
+        <li>(opcional) Outras sprites SVG</li>
+        <li>Transcrição das aulas</li>
+    <ul>
+</details>
+
+<details>
+    <summary>Inline de recursos</summary>
+    <ul>
+        <li>Inline de recursos</li>
+        <li>O tamanho real do HTML</li>
+        <li>Tamanho do HTML</li>
+        <li>Projeto: inline de JS</li>
+        <li>Projeto: inline de SVG</li>
+        <li>Transcrição das aulas</li>
+    <ul>
+</details>
+
+<details>
+    <summary>Paralelizando requests</summary>
+    <ul>
+        <li>Requests paralelos</li>
+        <li>Impactos da paralelização</li>
+        <li>Porque paralelizar?</li>
+        <li>Hostname paralelo</li>
+        <li>Análise do impacto</li>
+        <li>Transcrição das aulas</li>
+    <ul>
+</details>
+
+<details>
+    <summary>Cache HTTP</summary>
+    <ul>
+        <li>Cache com Expires</li>
+        <li>Prática do cache</li>
+        <li>Fingerprint dos assets</li>
+        <li>Cache alto nos servidores</li>
+        <li>Projeto: revisões com gulp</li>
+        <li>Cache no GAE</li>
+        <li>Cache no nginx</li>
+        <li>Transcrição das aulas</li>
+    <ul>
+</details>
+
+<details>
+    <summary>Conclusão</summary>
+    <ul>
+        <li>Análise final</li>
+        <li>Atalho no gulp</li>
+        <li>Sua análise final</li>
+        <li>Transcrição das aulas</li>
+        <li>Performance é UX</li>
+    <ul>
+</details>
+
+# Notas das aulas:
+
+* Projeto: Minificação  
+    No arquivo [Dockerfile](https://github.com/claudimf/alura_performance_web/blob/main/Dockerfile) adicione o comando de instalação do [gulp-cli](https://www.npmjs.com/package/gulp-cli):
+    ```sh
+    RUN npm install -g gulp-cli
+    ```
 
 ### Permissões de arquivos:
 
