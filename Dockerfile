@@ -7,7 +7,7 @@ COPY package*.json ./
 COPY npm-shrinkwrap.json ./
 
 RUN npm install -g gulp-cli
-
+RUN npm install uglify-js -g
 RUN npm install 
 
 COPY . .
