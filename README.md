@@ -2,7 +2,59 @@
 
 ## Sobre o projeto:
 
-Clone o [projeto](https://github.com/alura-cursos/performance-web) e faça `npm install` para instalar as dependências.
+Clone o [projeto](https://github.com/alura-cursos/performance-web) para depois configurarmos o docker.
+
+### Configurar a aplicação no Docker:
+
+1. Cria o arquivo [server.js](https://github.com/claudimf/alura_performance_web/blob/main/docker-compose.yml) para subir o servidor:
+    ```sh
+    var express = require("express");
+    var app = express();
+    var router = express.Router();
+
+    var path = __dirname + '/site/';
+    const PORT = 8080;
+    const HOST = '0.0.0.0';
+
+    router.use(function (req,res,next) {
+    console.log("/" + req.method);
+    next();
+    });
+
+    router.get("/",function(req,res){
+    res.sendFile(path + "index.html");
+    });
+
+    app.use(express.static(path));
+    app.use("/", router);
+
+    app.listen(PORT, HOST);
+    console.log(`Running on http://${HOST}:${PORT}`);
+    ```
+
+2. Cria o arquivo [Dockerfile](https://github.com/claudimf/alura_performance_web/blob/main/Dockerfile)
+
+3. Cria o arquivo [docker-compose.yml](https://github.com/claudimf/alura_performance_web/blob/main/docker-compose.yml)
+
+4. Adaptar o arquivo [package.json](https://github.com/claudimf/alura_performance_web/blob/main/package.json) adicionando as dependências:
+    ```sh
+    {
+        "devDependencies": {
+            "nodemon": "^1.18.10"
+        },
+        "dependencies": {
+            "ejs": "^2.6.1",
+            "express": "^4.16.4",
+            "mongoose": "^5.4.10"
+        }
+    }
+    ```
+
+5. Adaptar o arquivo [.dockerignore](https://github.com/claudimf/alura_performance_web/blob/main/.dockerignore) para ignorar os arquivos abaixo:
+    ```sh
+    node_modules
+    npm-debug.log
+    ```
 
 ### Permissões de arquivos:
 
