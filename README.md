@@ -217,6 +217,26 @@ Clone o [projeto](https://github.com/alura-cursos/performance-web) para depois c
     ```sh
     RUN npm install -g gulp-cli
     ```
+    Criar rotas para visualizar o 'original' e a versão 'modificada' com gulp no servidor [server.js](https://github.com/claudimf/alura_performance_web/blob/main/server.js):
+
+    ```sh
+    var dist_path = __dirname + '/dist/';
+    ...
+    router.get("/original",function(req,res){
+    res.sendFile(path + "index.html");
+    });
+
+    router.get("/modificada",function(req,res){
+    res.sendFile(dist_path + "index.html");
+    });
+    ...
+    ```
+    Entrar na bash e executar o comando de minificar:
+     ```sh
+    docker-compose run --rm web bash gulp minify
+    ```
+
+    Subir a aplicação e verificar a [original](http://localhost:3000/original) e a [modificada](http://localhost:3000/modificada)
 
 ### Permissões de arquivos:
 

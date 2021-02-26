@@ -3,6 +3,7 @@ var app = express();
 var router = express.Router();
 
 var path = __dirname + '/site/';
+var dist_path = __dirname + '/dist/';
 const PORT = 8080;
 const HOST = '0.0.0.0';
 
@@ -13,6 +14,14 @@ router.use(function (req,res,next) {
 
 router.get("/",function(req,res){
   res.sendFile(path + "index.html");
+});
+
+router.get("/original",function(req,res){
+  res.sendFile(path + "index.html");
+});
+
+router.get("/modificada",function(req,res){
+  res.sendFile(dist_path + "index.html");
 });
 
 app.use(express.static(path));
