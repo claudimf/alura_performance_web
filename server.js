@@ -1,5 +1,7 @@
 var express = require("express");
+var compression = require('compression')
 var app = express();
+app.use(compression());
 var router = express.Router();
 
 var path = __dirname + '/site/';
