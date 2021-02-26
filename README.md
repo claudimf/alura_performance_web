@@ -238,6 +238,14 @@ Clone o [projeto](https://github.com/alura-cursos/performance-web) para depois c
 
     Subir a aplicação e verificar a [original](http://localhost:3000/original) e a [modificada](http://localhost:3000/modificada)
 
+* Projeto: gulp copy
+    Na bash do seu container remova a pasta 'dist/assets' e depois 'minifique', para isso rode:
+    ```sh
+    rm -rf dist/assets/
+
+    gulp copy minify
+    ```
+
 ### Permissões de arquivos:
 
 Ao se adicionar libs ou qualquer outro comando que crie arquivos dentro do contâiner Docker o proprietário para edição se torna o contâiner, sendo assim você precisará rodar o comando abaixo para alterar essas permissões e você poder editar:
