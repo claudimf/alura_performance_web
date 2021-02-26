@@ -4,7 +4,11 @@ WORKDIR /usr/src/app
 
 COPY package*.json ./
 
-RUN npm install
+COPY npm-shrinkwrap.json ./
+
+RUN npm install -g gulp-cli
+
+RUN npm install 
 
 COPY . .
 

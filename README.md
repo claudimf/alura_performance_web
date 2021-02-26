@@ -56,6 +56,17 @@ Clone o [projeto](https://github.com/alura-cursos/performance-web) para depois c
     npm-debug.log
     ```
 
+6. Criar o arquivo [npm-shrinkwrap.json](https://github.com/claudimf/alura_performance_web/blob/main/npm-shrinkwrap.json) com o seguinte conteúdo:
+    ```sh
+    {
+        "dependencies": {
+            "graceful-fs": {
+                "version": "4.2.4"
+            }
+        }
+    }
+    ```
+
 ### Permissões de arquivos:
 
 Ao se adicionar libs ou qualquer outro comando que crie arquivos dentro do contâiner Docker o proprietário para edição se torna o contâiner, sendo assim você precisará rodar o comando abaixo para alterar essas permissões e você poder editar:
@@ -115,3 +126,5 @@ Para visualizar o sistema basta acessar no navegador no endereço: [localhost:30
 [4° Como Construir uma Aplicação Node.js com o Docker](https://www.digitalocean.com/community/tutorials/como-construir-uma-aplicacao-node-js-com-o-docker-pt)
 
 [5° Conteinerizando um aplicativo Node.js para desenvolvimento com o Docker Compose](https://www.digitalocean.com/community/tutorials/containerizing-a-node-js-application-for-development-with-docker-compose-pt)
+
+[6° ERRO: primordials is not defined](https://cursos.alura.com.br/forum/topico-erro-primordials-is-not-defined-106764)
